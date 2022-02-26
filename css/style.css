@@ -1,0 +1,464 @@
+/* Variables */
+:root {
+    --ff-headings: "Yeseva One", serif;
+
+    --clr-100: #ffffff;
+    --clr-bg-200: #f2f6f7;
+    --clr-900: #0d0d25;
+    --clr-primary-orange: #ff8800;
+}
+
+/* Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../images/bg-body.jpg") 0 0 fixed no-repeat;
+    color: var(--clr-900);
+}
+
+h1,
+h2 {
+    font-family: var(--ff-headings);
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 8.5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 8.5vw, 2.5rem);
+}
+
+.header {
+    background: linear-gradient(to top, transparent 20%, #fff 85%),
+        url("../images/bg-main.jpg") top right no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav__ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.nav__li--icon,
+.nav__li--link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__li--logo {
+    width: 50px;
+}
+
+.header__main {
+    padding-bottom: 2rem;
+    min-width: 300px;
+}
+
+#about {
+    background: 
+        radial-gradient(circle at center, var(--clr-100) 30%, transparent 75%),
+        url("../images/oatmeal.png") right no-repeat;
+    padding: 2rem;
+}
+
+.about__cont {
+    padding-bottom: 2rem;
+}
+.about__title {
+    color: var(--clr-primary-orange);
+}
+
+.about__desc + .about__desc {
+    padding-bottom: 1rem;
+}
+
+#menu {
+    background: var(--clr-bg-200);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.menu__top--cta {
+    color: var(--clr-primary-orange);
+}
+
+.menu__top--ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.menu__top--li {
+    width: 15ch;
+    border-bottom: 3px solid #00000025;
+    padding-bottom: 1rem;
+}
+
+.menu__top--li:hover {
+    border-bottom: 3px solid var(--clr-primary-orange);
+    color: var(--clr-primary-orange);
+}
+
+.menu__top--link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu__bottom {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+
+.menu__card {
+    width: 30ch;
+    height: 35ch;
+    background: #000;
+}
+
+.menu__card--desc {
+    opacity: 0;
+    width: 30ch;
+    height: 35ch;
+    position: relative;
+    color: var(--clr-100);
+    padding: 2rem 1rem;
+}
+
+.menu__card--desc:hover {
+    opacity: 1;
+    width: 30ch;
+    height: 35ch;
+    position: relative;
+    color: var(--clr-100);
+    padding: 2rem 1rem;
+}
+
+.menu__card--price {
+    font-size: 1.5rem;
+}
+
+.menu__card--rating {
+    color: var(--clr-primary-orange);
+    display: block;
+    margin: 1rem 0;
+}
+
+.menu__card--title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu__pages * {
+    color: var(--clr-primary-orange);
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.menu__page--md {
+    font-size: 2.75rem;
+}
+
+
+#hours {
+    background: 
+        radial-gradient(circle at center, var(--clr-100) 40%,transparent 100%),
+        url("../images/breakfast.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hours__cta {
+    color: var(--clr-primary-orange);
+}
+
+.phone {
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    color: var(--clr-primary-orange);
+}
+
+.hours__cont {
+    display: flex;
+    justify-content: center;
+}
+
+.hours__inner {
+    padding: 1rem;
+}
+
+.hours__days {
+    display: block;
+    text-align: left;
+}
+
+.hours__times {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hours__carousel {
+    color: var(--clr-primary-orange);
+    display: flex;
+    justify-content: center;
+}
+
+#testimonials {
+    text-align: center;
+    padding: 2rem;
+    background: var(--clr-100);
+}
+
+.testimonials__img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.testimonials__name {
+    display: block;
+    font-family: var(--ff-headings);
+    font-size: 1.5rem;
+}
+
+.testimonials__pages * {
+    color: var(--clr-primary-orange);
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.testimonials__rating {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--clr-primary-orange);
+}
+
+.testimonials__desc {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonials__page--md {
+    font-size: 2.75rem;
+}
+
+/* Utility Styles */
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.primary,
+.secondary,
+.tertiary {
+    display: none;
+}
+
+.content-center {
+    padding: 0 2rem;
+}
+
+.orange {
+    color: var(--clr-primary-orange);
+}
+
+.socials {
+    font-weight: 700;
+    padding: 0 1rem 0 0.5rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: var(--clr-primary-orange);
+    color: var(--clr-100);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.contadina {
+    background: url("../images/contadina.jpg") right no-repeat;
+    background-size: cover;
+}
+
+.contadina:hover {
+    background: 
+        radial-gradient(circle at center, var(--clr-900) 0, transparent 100%),
+        url("../images/contadina.jpg") right no-repeat;
+    background-size: cover;
+}
+
+.arrow {
+    font-size: 2rem;
+    padding: 13rem 1rem;
+    vertical-align: middle;
+}
+
+/* Component Styling */
+/* Input Search Bar */
+:root {
+    --input-color: #99a3ba;
+    --input-border: #cdd9ed;
+    --input-background: #fff;
+    --input-placeholder: #cbd1dc;
+    --input-border-focus: #275efe;
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #eef4ff;
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #ff8800;
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border 0.3s ease;
+}
+.form-field::-moz-placeholder {
+    color: var(--input-placeholder);
+}
+.form-field:-ms-input-placeholder {
+    color: var(--input-placeholder);
+}
+.form-field::placeholder {
+    color: var(--input-placeholder);
+}
+.form-field:focus {
+    outline: none;
+    border-color: var(--input-border-focus);
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.form-group > span,
+.form-group .form-field {
+    white-space: nowrap;
+    display: block;
+}
+.form-group > span:not(:first-child):not(:last-child),
+.form-group .form-field:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+.form-group > span:first-child,
+.form-group .form-field:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.form-group > span:last-child,
+.form-group .form-field:last-child {
+    border-radius: 0 6px 6px 0;
+}
+.form-group > span:not(:first-child),
+.form-group .form-field:not(:first-child) {
+    margin-left: -1px;
+}
+.form-group .form-field {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.form-group > span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: var(--group-background);
+    border: 1px solid var(--group-border);
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.form-group:focus-within > span {
+    color: var(--group-color-focus);
+    background: var(--group-background-focus);
+    border-color: var(--group-border-focus);
+}
+
+@media screen and (min-width: 550px) {
+    .primary {
+        display: inline-block;
+    }
+
+    .secondary {
+        display: inline-block;
+    }
+
+    #about {
+        background: linear-gradient(
+                0.25turn,
+                transparent 25%,
+                white 50%,
+                transparent 100%
+            ),
+            url("../images/pie.jpg") left/50% no-repeat,
+            url("../images/oatmeal.png") right/50% no-repeat;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .tertiary {
+        display: inline-block;
+    }
+
+    .header__main {
+        width: 50%;
+    }
+
+    .about__cont {
+        width: 50%;
+        position: relative;
+        right: -50%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .content-center {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
